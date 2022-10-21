@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Generate Subtitle</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form">
+            <header>
+                <h1>Create Subtitle File</h1>
+            </header>
+            <div class="subtitles">
+                <label>Subtitles</label>
+                <div class="subtitle_box">
+                    <label>
+                        <i class="fa-solid fa-plus add_before"></i>
+                        <i class="fa-solid fa-xmark close"></i>
+                    </label>
+                    <div class="input_field">
+                        <textarea class="caption_text"></textarea>
+                        <input type="text" class="start" placeholder="00:00:00" data-input="timestamp">
+                        <input type="text" class="end" placeholder="00:00:00" data-input="timestamp">
+                    </div>
+                    <label class="bottom_label">
+                        <i class="fa-solid fa-plus add_after"></i>
+                    </label>
+                </div>
+            </div>
+            <div class="file_options">
+                <div class="file_name option">
+                    <label>File Name</label>
+                    <input type="text">
+                </div>
+                <div class="save_as option">
+                    <label>Save As</label>
+                    <div class="select_menu">
+                        <select>
+                            <option value=".vtt">(.vtt)</option>
+                            <option value=".srt">(.srt)</option>
+                            <option value=".sbv">(.sbv)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <a class="subBtn btn">Generate Subtitle File</a>
+        </div>
+        <div class="video_source">
+            <video class="mainVideo" controls poster="./img.png"></video>
+            <div class="buttons">
+                <button class="btn insert_btn">Insert Time</button>
+                <input type="file" class="btn" accept=".mp4,.mkv">
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
